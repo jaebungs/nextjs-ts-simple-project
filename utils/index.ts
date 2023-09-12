@@ -5,8 +5,8 @@ export async function fetchCars(filters: FetchCarProps) {
   
     // Set the required headers for the API request
     const headers: HeadersInit = {
-      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_API_KEY || "",
-      "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
+        'X-RapidAPI-Key': `${process.env.CARS_API_KEY}`,
+        'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     };
   
     // Set the required headers for the API request
@@ -19,7 +19,6 @@ export async function fetchCars(filters: FetchCarProps) {
 
     // Parse the response as JSON
     const result = await response.json();
-
     return result;
 }
 
