@@ -1,3 +1,4 @@
+import exp from "constants"
 import { MouseEventHandler } from "react"
 
 export interface CustomButtonProps {
@@ -15,8 +16,13 @@ export interface SearchManufacturerProps {
     setManufacturer: (manufacturer: string) => void
 }
 
+export interface OptionProps {
+    title: string
+    value: string
+}
 export interface CustomFilterProps {
     title: string
+    options: OptionProps[]
 }
 
 export interface CarProps {
@@ -40,4 +46,14 @@ export interface FetchCarProps {
     fuel: string
     limit: number
     model: string
+}
+
+export interface HomeProps {
+    searchParams: FetchCarProps;
+}
+
+
+export interface ShowMoreProps {
+    pageNumber: number;
+    isNext: boolean
 }
